@@ -1,0 +1,14 @@
+name: demo workflow01
+
+on: [push, pull_request]
+
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: welcome message
+          run: echo "My first demo workflow"
+        - name: list files 
+          run: ls
+        - name: :Read files 
+          run: cat README.md
