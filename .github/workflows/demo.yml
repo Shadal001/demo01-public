@@ -8,11 +8,11 @@ jobs:
         steps:
         - name: checkout repo 
           uses: actions/checkout@v7
-          
+
         - name: install Cow says
           run: | 
             sudo apt-get install cowsay -y
-            cowsay -f lion "run fast" >> lion.txt
+            cowsay -f dragon "run fast" >> lion.txt
             grep -i "lion" lion.txt
             cat lion.txt
             ls -ltra 
