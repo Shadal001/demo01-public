@@ -1,18 +1,23 @@
 name: demo workflow01
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-        - name: checkout repo 
-          uses: actions/checkout@v7
+  first_job:
+    runs-on: ubuntu-latest
 
-        - name: install Cow says
-          run: | 
-            sudo apt-get install cowsay -y
-            cowsay -f dragon "run fast" >> lion.txt
-            grep -i "lion" lion.txt
-            cat lion.txt
-            ls -ltra 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install cowsay
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cowsay
+
+          cowsay -f dragon "run fast" > lion.txt
+
+          cat lion.txt
+          ls -ltra
