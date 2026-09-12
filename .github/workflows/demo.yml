@@ -14,8 +14,8 @@ jobs:
 
       - name: sleep
         run: sleep 5
-        
+
       - name: Install cowsay
         run: |
-          chmod +x install-cowsay.sh
-          ./install-cowsay.sh
+          chmod +x .github/workflows/install-cowsay.sh
+          ./.github/workflows/install-cowsay.sh
