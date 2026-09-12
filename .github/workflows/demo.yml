@@ -12,12 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: sleep
+        run: sleep 5
+        
       - name: Install cowsay
         run: |
-          sudo apt-get update
-          sudo apt-get install -y cowsay
-
-          cowsay -f dragon "run fast" > lion.txt
-
-          cat lion.txt
-          ls -ltra
+          chmod +x install-cowsay.sh
+          ./install-cowsay.sh
