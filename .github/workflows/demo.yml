@@ -1,6 +1,7 @@
 name: demo workflow01
 
 on:
+  workflow_dispatch:
   push:
   pull_request:
 
