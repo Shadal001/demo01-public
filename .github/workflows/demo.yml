@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: sleep
-        run: sleep 6
+        run: sleep 7
 
       - name: Install cowsay
         run: echo this workflow/job/step is executed for event type ${{github.event_name}}
