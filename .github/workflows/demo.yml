@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
   push:
     branches-ignore:
-      - 'main'
       - 'releases/**'
   pull_request:
     types: [opened, reopened]
